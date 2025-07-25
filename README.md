@@ -1,6 +1,6 @@
 # 🎙️ Text-to-Speech (TTS) Web App
 
-> A minimal Flask-based web app that converts user-written Persian text into spoken audio using Gemini's TTS API — designed with speed, clarity, and elegance in mind.
+> A minimal Flask-based web app that converts user-written text into spoken audio using Gemini's TTS API — designed with speed, clarity, and elegance in mind.
 
 ---
 
