@@ -4,14 +4,11 @@ import wave
 import time
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
 
 app = Flask(__name__)
-
-from dotenv import load_dotenv
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-
-
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 VOICE_OPTIONS = [
@@ -70,5 +67,7 @@ def index():
 def download(filename):
     return send_from_directory("static", filename, as_attachment=True)
 
+
+port = int(os.environ.get("PORT", 5000))
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
