@@ -1,3 +1,6 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/feaf68ba-193d-41dd-addb-9256b57ea2d9" />
+
+
 # 🎙️ Text-to-Speech (TTS) Web App
 
 > A minimal Flask-based web app that converts user-written text into spoken audio using Gemini's TTS API — designed with speed, clarity, and elegance in mind.
