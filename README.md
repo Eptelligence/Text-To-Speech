@@ -61,11 +61,12 @@ echo "GEMINI_API_KEY=your_key_here" > .env
 
 # 5. Run the app
 python app.py
+```
 Then open http://localhost:5000 in your browser.
 
----
 
-## 📌 Why I Built This
+ ## 📌 Why I Built This
+ 
 I wanted a fast, minimal, and satisfying way to interact with modern TTS systems —
 and at the same time explore the elegance of Flask for building practical web tools.
 
@@ -76,17 +77,19 @@ Secure key handling
 Real-world deployment of Flask apps
 
 
-📷 Screenshot
+## 📷 Screenshot
 <img width="1919" height="907" alt="image" src="https://github.com/user-attachments/assets/95a75c3b-b779-4b0b-9448-4156970f03a4" />
 
 
-📄 License
+## 📄 License
 MIT License — Free to use and modify.
 
 
-🤝 Let's Connect
+## 🤝 Let's Connect
 I'm always up for collaboration or feedback!
 
 LinkedIn: https://www.linkedin.com/in/erfan-pouretemad/
+
 GitHub: https://github.com/Eptelligence
+
 Website: www.Eptelligence.com
