@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/feaf68ba-193d-41dd-addb-9256b57ea2d9" />
+<img width="1149" height="402" alt="image" src="https://github.com/user-attachments/assets/f57ea9a8-5947-4272-83f5-997bdecbafd3" />
+
 
 
 # 🎙️ Text-to-Speech (TTS) Web App
