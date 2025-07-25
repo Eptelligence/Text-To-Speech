@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech to Text</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            border-radius: 0 0 12px 12px;
+            font-size: 24px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            font-size: 16px;
+        }
+
+        select, button {
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>🎧 Speech to Text</h1>
+
+    <div class="container">
+        <h2>🎙️ Convert Text to Persian Speech</h2>
+
+        <form method="POST">
+            <textarea name="text" rows="4" placeholder="Write here...">{{ text if text else '' }}</textarea><br>
+
+            <label for="voice">🎤 Select Voice:</label>
+            <select name="voice" id="voice">
+                {% for v in voices %}
+                    <option value="{{ v }}" {% if v == voice %}selected{% endif %}>{{ v }}</option>
+                {% endfor %}
+            </select><br>
+
+            <button type="submit">🔊 Convert</button>
+        </form>
+
+        {% if audio_file %}
+            <h3>Generated voice with "{{ voice }}":</h3>
+            <audio controls>
+                <source src="{{ url_for('static', filename=audio_file) }}?ts={{ ts }}" type="audio/wav">
+                Your browser does not support audio playback.
+            </audio>
+            <br>
+            <a href="{{ url_for('download', filename=audio_file) }}?ts={{ ts }}">⬇️ Download Audio File</a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
